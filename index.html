@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+   <title>Quiz Academico IFMS</title>
+   <!---isso aqui é para mudar as letras -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <!--isso aqui é para icones kk-->
+   <link rel="stylesheet" href="dos.css">
+   <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+   <!---- manipulação de documentos HTML, manipulação de eventos, animação-->
+  
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script> 
+    <style>
+
+   .invisivel {
+    display: none;
+   }
+   </style>
+  </head>
+  <body>
+    <div class="Container flex" class="visivel" id="pagina_1">
+          <h1>Quiz Matematica</h1>
+          <button class="btn" id="start" onclick="toMenu()">Começe;)</button>  
+          <button onclick="cadas()">Salvar pontuação</button>   
+        <div id="menu" class="invisivel flex">   <h1>Menu</h1>
+          <div>
+            <button class="btn" onclick="quiz(0)">Facíl</button>
+          </div>
+          <div>
+          <button class="btn" onclick="quiz(1)">Normal</button>
+          </div>
+          <div>
+          <button class="btn" onclick="quiz(2)">Difícil</button>
+          </div>
+        </div>
+        <p id="recorde"></p>
+        <p id="tempo"></p>
+        <br>
+        <div id="questao">
+          <span id="op"></span>
+        </div>
+        <input type="text" id="input" autocomplete = "off" autofocus>
+        <p id="output"></p>
+        <button class="btn" id="answer" onclick="check()">Responder</button>
+        <p id="victory"></p>
+        <button class="visivel" id="restart" onclick="location.reload()">Jogar de NOVO</button>
+        <hr>
+        <a href="histmat.html" class="linka">Historia Da Matematica</a>
+      </div>
+
+  <div class="invisivel flex" id="cadastro">
+  <div class="visivel flex" id="cadastro">
+    <input type="text" id="nome" placeholder="Digite seu nome: " >
+    <input type="text" id="ponto" placeholder="Digite sua pontuação: ">
+    <button onclick="salvar(nome.value, ponto.value)">Salvar</button>
+  </div>
+  <div class="flex">
+      <p id="nome1"></p>
+    <button onclick="mostrar()">Buscar</button>
+    <button onclick="jogo() "> Voltar Para o jogo</button>
+    </div>
+  </div>
+  
+  <script src="java.js"></script> <!--conectart a pasta js--->
+
+  <!--Desenvolvido por Jucielly Gonçalves e João Renato-->
+  <!-- link do video no You Tube: https://youtu.be/HJt40j6viFs -->
+
+  </body>
+</html>
